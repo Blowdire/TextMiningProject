@@ -1,0 +1,4 @@
+TMS
+
+Text Summarization
+Dataset scelto: CNN/Daily Mail [https://github.com/abisee/cnn-dailymail]
