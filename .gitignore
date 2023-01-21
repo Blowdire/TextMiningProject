@@ -1,0 +1,9 @@
+stories
+finished_files
+dailymail_stories
+*.story
+*.question
+*.questions
+IMDB
+IMDB/**
+imdb.vocab
