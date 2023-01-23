@@ -1,7 +1,7 @@
 TMS
 
-Text Summarization
-Dataset scelto: CNN/Daily Mail [https://github.com/abisee/cnn-dailymail]
+Text Classification
+Dataset scelto: IMDB [http://ai.stanford.edu/~amaas/data/sentiment/]
 
 Simili:
 

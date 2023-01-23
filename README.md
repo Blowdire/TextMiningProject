@@ -1,1 +1,1 @@
-# Text Mining Project
+# Text Mining and Search project
