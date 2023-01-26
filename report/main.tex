@@ -1,30 +1,30 @@
-%----------------------------------------------------------------------------------------
+% Text Mining and Search 2022/23
+
+%-----------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
 
 \documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
-
 \usepackage[english]{babel} % Specify a different language here - english by default
-
 \usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
 %	COLUMNS
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
 
 \setlength{\columnsep}{0.75cm} % Distance between the two columns of text
 \setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
 %	COLORS
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
 
 \definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
 \definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
 %	HYPERLINKS
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
 
 \usepackage{hyperref} % Required for hyperlinks
 
@@ -40,28 +40,34 @@
 	pdfauthor={Author},
 }
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
 %	ARTICLE INFORMATION
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
 
 \JournalInfo{Text Mining and Search} % Journal information
 \Archive{UniMiB, 2022-23} % Additional notes (e.g. copyright, DOI, review/research article)
 
-\PaperTitle{IMDB Reviews} % Article title
+\PaperTitle{IMDB Reviews\\
+\vspace{2mm}\large{Text Mining and Search}} % Article title
 
-\Authors{Agazzi Ruben xxxxxx, Cominetti Fabrizio 882737} % Authors
-\affiliation{\textbf{University}: University of Milan-Bicocca} % Corresponding author
+\Authors{Agazzi Ruben 844736, Cominetti Fabrizio 882737} % Authors
+\affiliation{\textbf{University}: University of Milano-Bicocca} % Corresponding author
 
 \Keywords{Keyword1 --- Keyword2 --- Keyword3} % Keywords - if you don't want any simply remove all the text between the curly brackets
 \newcommand{\keywordname}{Keywords} % Defines the keywords heading name
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
 %	ABSTRACT
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
 
 \Abstract{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.}
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
+
+\usepackage{biblatex}
+\addbibresource{ref.bib} %Import the bibliography file
+
+%-----------------------------------------------------------------
 
 \begin{document}
 
@@ -71,132 +77,38 @@
 
 \thispagestyle{empty} % Removes page numbering from the first page
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
 %	ARTICLE CONTENTS
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
 
-\section*{Introduction} % The \section*{} command stops section numbering
+\section{Introduction}
+...
 
-\addcontentsline{toc}{section}{Introduction} % Adds this section to the table of contents
+\section{Data}
+Large Movie Review Dataset.//
+This is a dataset for binary sentiment classification containing substantially more data than previous benchmark datasets. We provide a set of 25,000 highly polar movie reviews for training, and 25,000 for testing. There is additional unlabeled data for use as well. Raw text and already processed bag of words formats are provided.
 
-\lipsum[1-3] % Dummy text
- and some mathematics $\cos\pi=-1$ and $\alpha$ in the text\footnote{And some mathematics $\cos\pi=-1$ and $\alpha$ in the text.}.
+\subsection{Data Pre-Processing}
+...
 
-%------------------------------------------------
+\subsection{Dimensionality Reduction}
+...
 
-\section{Methods}
+\section{Text Representation}
+...
 
-\begin{figure*}[ht]\centering % Using \begin{figure*} makes the figure take up the entire width of the page
-	\includegraphics[width=\linewidth]{view}
-	\caption{Wide Picture}
-	\label{fig:view}
-\end{figure*}
+\section{Text Classification}
+...
 
-\lipsum[4] % Dummy text
+\section{Text Clustering}
+...
 
-\begin{equation}
-	\cos^3 \theta =\frac{1}{4}\cos\theta+\frac{3}{4}\cos 3\theta
-	\label{eq:refname2}
-\end{equation}
+\section{Summary}
+...
 
-\lipsum[5] % Dummy text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{enumerate}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
-	\item First item in a list
-	\item Second item in a list
-	\item Third item in a list
-\end{enumerate}
-
-\subsection{Subsection}
-
-\lipsum[6] % Dummy text
-
-\paragraph{Paragraph} \lipsum[7] % Dummy text
-\paragraph{Paragraph} \lipsum[8] % Dummy text
-
-\subsection{Subsection}
-
-\lipsum[9] % Dummy text
-
-\begin{figure}[ht]\centering
-	\includegraphics[width=\linewidth]{results}
-	\caption{In-text Picture}
-	\label{fig:results}
-\end{figure}
-
-Reference to Figure \ref{fig:results}.
-
-%------------------------------------------------
-
-\section{Results and Discussion}
-
-\lipsum[10] % Dummy text
-
-\subsection{Subsection}
-
-\lipsum[11] % Dummy text
-
-\begin{table}[hbt]
-	\caption{Table of Grades}
-	\centering
-	\begin{tabular}{llr}
-		\toprule
-		\multicolumn{2}{c}{Name} \\
-		\cmidrule(r){1-2}
-		First name & Last Name & Grade \\
-		\midrule
-		John & Doe & $7.5$ \\
-		Richard & Miles & $2$ \\
-		\bottomrule
-	\end{tabular}
-	\label{tab:label}
-\end{table}
-
-\subsubsection{Subsubsection}
-
-\lipsum[12] % Dummy text
-
-\begin{description}
-	\item[Word] Definition
-	\item[Concept] Explanation
-	\item[Idea] Text
-\end{description}
-
-\subsubsection{Subsubsection}
-
-\lipsum[13] % Dummy text
-
-\begin{itemize}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
-	\item First item in a list
-	\item Second item in a list
-	\item Third item in a list
-\end{itemize}
-
-\subsubsection{Subsubsection}
-
-\lipsum[14] % Dummy text
-
-\subsection{Subsection}
-
-\lipsum[15-23] % Dummy text
-
-%------------------------------------------------
-
-\phantomsection
-\section*{Acknowledgments} % The \section*{} command stops section numbering
-
-\addcontentsline{toc}{section}{Acknowledgments} % Adds this section to the table of contents
-
-So long and thanks for all the fish \cite{Figueredo:2009dg, Smith:2012qr}.
-
-%----------------------------------------------------------------------------------------
-%	REFERENCE LIST
-%----------------------------------------------------------------------------------------
-
-\phantomsection
-\bibliographystyle{unsrt}
-\bibliography{sample.bib}
-
-%----------------------------------------------------------------------------------------
+\nocite{*}
+\printbibliography
 
 \end{document}
