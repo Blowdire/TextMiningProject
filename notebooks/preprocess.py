@@ -1,13 +1,15 @@
-from multiprocessing import Pool
 import numpy as np
-import string
-from nltk.stem import WordNetLemmatizer
-from nltk.corpus import stopwords
 import pandas as pd
 import re
-import nltk
-from nltk.tokenize import word_tokenize
+import string
 from tqdm import tqdm
+
+import nltk
+from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+from multiprocessing import Pool
 
 
 def remove_numbers(text_to_preprocess):
@@ -48,8 +50,7 @@ def lemmatizer_function(tokenized_text):
 
 def preprocess_loader(dataframe):
     tqdm.pandas()
-    dataframe['preprocessed_text'] = dataframe['text'].apply(
-        preprocess_text)
+    dataframe['preprocessed_text'] = dataframe['text'].apply(preprocess_text)
     return dataframe
 
 
@@ -67,7 +68,7 @@ def preprocess_text(text):
 lemmatizer = WordNetLemmatizer()
 
 if __name__ == '__main__':
-    train_ds = pd.read_csv('./data/test_dataset.csv')
+    train_ds = pd.read_csv('./data/train_dataset.csv')
     df_split = np.array_split(train_ds, 100000)
     pool = Pool(12)
     results = tqdm(pool.imap(preprocess_loader, df_split),
@@ -75,4 +76,4 @@ if __name__ == '__main__':
     df = pd.concat(results)
     pool.close()
     pool.join()
-    df.to_csv('./test.csv')
+    df.to_csv('./train.csv')
