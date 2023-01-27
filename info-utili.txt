@@ -1,0 +1,11 @@
+Abstract report: ...diverse tecniche di classificazione e valutazione e diverse tecniche di clustering.
+
+Other popular choices for TC include:
+- Boosted Decision Stumps (One level decision tree);
+- Logistic Regression;
+- Naive Bayesian Methods;
+- Lazy Learning Methods (k-NN).
+
+There are two important aspects to Evaluate a classifier: Efficiency, which refers to the consumption of computational resources (training and classification), and Effectiveness (Accuracy), that refers to how frequently classification decisions taken by a classifier are correct.
+
+In classification by sentiment, bag of words is not enough, and deeper linguistic processing is necessary.
