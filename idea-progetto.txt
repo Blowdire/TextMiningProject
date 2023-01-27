@@ -8,3 +8,5 @@ Simili:
 - [https://github.com/FrancescoFustini/Text-Mining]
 - [https://github.com/simonetufano/Amazon_Reviews_Analysis]
 - [https://github.com/malborroni/Good-or-Bad_Ask-your-Pet]
+
+- [https://medium.com/nerd-for-tech/building-a-basic-binary-text-classifier-using-keras-4972a7c36616]
