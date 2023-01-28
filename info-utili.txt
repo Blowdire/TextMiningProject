@@ -1,3 +1,18 @@
+TMS
+
+Text Classification
+Dataset scelto: IMDB [http://ai.stanford.edu/~amaas/data/sentiment/]
+
+Simili:
+
+- [https://github.com/FrancescoFustini/Text-Mining]
+- [https://github.com/simonetufano/Amazon_Reviews_Analysis]
+- [https://github.com/malborroni/Good-or-Bad_Ask-your-Pet]
+
+- [https://medium.com/nerd-for-tech/building-a-basic-binary-text-classifier-using-keras-4972a7c36616]
+- [https://towardsdatascience.com/binary-classification-of-imdb-movie-reviews-648342bc70dd]
+- [https://medium.com/@pyashpq56/sentiment-analysis-on-imdb-movie-review-d004f3e470bd]
+
 Abstract report: ...diverse tecniche di classificazione e valutazione e diverse tecniche di clustering.
 
 Other popular choices for TC include:
