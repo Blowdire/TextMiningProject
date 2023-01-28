@@ -12,6 +12,11 @@ Simili:
 - [https://medium.com/nerd-for-tech/building-a-basic-binary-text-classifier-using-keras-4972a7c36616]
 - [https://towardsdatascience.com/binary-classification-of-imdb-movie-reviews-648342bc70dd]
 - [https://medium.com/@pyashpq56/sentiment-analysis-on-imdb-movie-review-d004f3e470bd]
+- [https://humboldt-wi.github.io/blog/research/information_systems_1718/05sentimentanalysis/]
+- [https://samyzaf.com/ML/imdb/imdb.html]
+- [https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews/code?datasetId=134715&sortBy=voteCount]
+- [https://realpython.com/python-keras-text-classification/#what-is-a-word-embedding]
+- [https://www.kaggle.com/code/lakshmi25npathi/sentiment-analysis-of-imdb-movie-reviews]
 
 Abstract report: ...diverse tecniche di classificazione e valutazione e diverse tecniche di clustering.
 
