@@ -29,3 +29,5 @@ Other popular choices for TC include:
 There are two important aspects to Evaluate a classifier: Efficiency, which refers to the consumption of computational resources (training and classification), and Effectiveness (Accuracy), that refers to how frequently classification decisions taken by a classifier are correct.
 
 In classification by sentiment, bag of words is not enough, and deeper linguistic processing is necessary.
+
+Note that those are different approaches with the same goal. Word2Vec achieves this by employing neural networks and GloVe achieves this with a co-occurrence matrix and by using matrix factorization. In both cases you are dealing with dimensionality reduction, but Word2Vec is more accurate and GloVe is faster to compute.
