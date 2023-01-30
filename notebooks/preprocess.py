@@ -70,7 +70,7 @@ lemmatizer = WordNetLemmatizer()
 if __name__ == '__main__':
     train_ds = pd.read_csv('./data/train_dataset.csv')
     df_split = np.array_split(train_ds, 100000)
-    pool = Pool(12)
+    pool = Pool(16)
     results = tqdm(pool.imap(preprocess_loader, df_split),
                    total=len(train_ds))
     df = pd.concat(results)
