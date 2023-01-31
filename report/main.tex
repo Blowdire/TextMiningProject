@@ -51,16 +51,16 @@
 \vspace{2mm}\large{Text Mining and Search}} % Article title
 
 \Authors{Agazzi Ruben 844736, Cominetti Fabrizio 882737} % Authors
-\affiliation{\textbf{University}: University of Milano-Bicocca} % Corresponding author
+\affiliation{\textbf{University}: University of Milan-Bicocca} % Corresponding author
 
-\Keywords{Keyword1 --- Keyword2 --- Keyword3} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\Keywords{Text Mining --- Text Classification --- Text Clustering} % Keywords - if you don't want any simply remove all the text between the curly brackets
 \newcommand{\keywordname}{Keywords} % Defines the keywords heading name
 
 %-----------------------------------------------------------------
 %	ABSTRACT
 %-----------------------------------------------------------------
 
-\Abstract{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.}
+\Abstract{In this project, user reviews from the IMDB platform were analyzed through the use of text mining techniques. After carrying out an initial phase of text processing and text representation, the project continued with the classification of the reviews, through some text classification techniques - such as Support Vector Machines (SVM), Multilayer Perceptron (MLP), and Logistic Regression. Next, a text clustering phase was carried out through the use of two algorithms: DBSCAN and k-means.}
 
 %-----------------------------------------------------------------
 
@@ -82,17 +82,30 @@
 %-----------------------------------------------------------------
 
 \section{Introduction}
-...
+The project aims to analyze the dataset "IMDB reviews" \cite{} through text mining techniques, specifically through \textit{Text Classification} and \textit{Text Clustering}. The dataset contains a total amount of 50000 user-released reviews on the IMDB platform, divided in half between training and testing. The dataset is ideal for performing a binary sentiment classification task, the first objective of our analysis. Next, we decided to exploit Text Clustering techniques with the goal of identifying different clusters within the text.\\
+Text Classification is the activity of predicting which data items belongs to a predefined finite set of classes. There are many types of classification, in our case it is \textit{Binary Classification}, where each item belongs to exactly one class in a set of two (positive or negative).\\
+In addition, text classification may be performed according to several dimensions ('axes') orthogonal to each other. For example, by topic (the most frequent case), by sentiment - our case -, by language, by type, by author, by native language, by gender, and more.\\
 
 \section{Data}
-Large Movie Review Dataset.//
-This is a dataset for binary sentiment classification containing substantially more data than previous benchmark datasets. We provide a set of 25,000 highly polar movie reviews for training, and 25,000 for testing. There is additional unlabeled data for use as well. Raw text and already processed bag of words formats are provided.
+As stated before, the dataset used contains a total of 50000 user reviews on the IMDB platform, a platform that describes itself in the following manner :"IMDb is the world's most popular and authoritative source for movie, TV and celebrity content. Find ratings and reviews for the newest movie and TV shows."
 
-\subsection{Data Pre-Processing}
-...
+Large Movie Review Dataset.\\
+This is a dataset for binary sentiment classification containing substantially more data than previous benchmark datasets. We provide a set of 25,000 highly polar movie reviews for training, and 25,000 for testing. There is additional unlabeled data for use as well. Raw text and already processed bag of words formats are provided.\\
+From an initial exploration of the data, we can observe that the dataset does not provide information about the date and reference film of the review, or any other indication, but contains only the text of the review and the extracted sentiment - positive or negative.\\
+The data, initially divided into training and testing, but also between positive and negative sentiment, were merged, so that there would be a single dataset for the 25000 reviews to be used in the training phase and the 25000 reviews to be used in the testing phase.\\
+Finally, the dataset contains precisely 12500 reviews labeled as positive and as many labeled as negative, both training and testing.
 
-\subsection{Dimensionality Reduction}
-...
+\section{Text Processing}
+Having obtained the starting dataset, a series of \textit{Text Processing} operations were performed:
+\begin{itemize}
+	\item \textit{Remove Numbers}, x;
+	\item \textit{Remove StopWords}, x;
+	\item \textit{Remove Punctuation}, x;
+	\item \textit{Remove Extra Space}, x;
+	\item \textit{Tokenization}, x;
+	\item \textit{Lower Case}, x;
+	\item \textit{Lemmatization}, x.
+\end{itemize}
 
 \section{Text Representation}
 ...
@@ -100,7 +113,28 @@ This is a dataset for binary sentiment classification containing substantially m
 \section{Text Classification}
 ...
 
+\subsection{SVM}
+...
+
+\subsection{Multilayer Perceptron}
+...
+
+\subsection{Logistic Regression}
+...
+
+\subsection{Evaluation}
+...
+
 \section{Text Clustering}
+...
+
+\subsection{DBSCAN}
+...
+
+\subsection{K-means}
+...
+
+\subsection{Evaluation}
 ...
 
 \section{Summary}
