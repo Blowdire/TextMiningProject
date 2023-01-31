@@ -1,10 +1,16 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Data}{1}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Data Pre-Processing}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Dimensionality Reduction}{1}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Text Representation}{1}{section.3}%
-\contentsline {section}{\numberline {4}Text Classification}{1}{section.4}%
-\contentsline {section}{\numberline {5}Text Clustering}{1}{section.5}%
-\contentsline {section}{\numberline {6}Summary}{1}{section.6}%
+\contentsline {section}{\numberline {3}Text Processing}{2}{section.3}%
+\contentsline {section}{\numberline {4}Text Representation}{2}{section.4}%
+\contentsline {section}{\numberline {5}Text Classification}{2}{section.5}%
+\contentsline {subsection}{\numberline {5.1}SVM}{2}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Multilayer Perceptron}{2}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Logistic Regression}{2}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Evaluation}{2}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Text Clustering}{2}{section.6}%
+\contentsline {subsection}{\numberline {6.1}DBSCAN}{2}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}K-means}{2}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Evaluation}{2}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Summary}{2}{section.7}%
 \contentsfinish 
