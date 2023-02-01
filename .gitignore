@@ -2,3 +2,5 @@ IMDB
 IMDB/**
 imdb.vocab
 *.save
+*.h5
+notebooks/checkpoint/best_model_bow.h5
