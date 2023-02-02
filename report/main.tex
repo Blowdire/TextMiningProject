@@ -7,6 +7,7 @@
 \documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
 \usepackage[english]{babel} % Specify a different language here - english by default
 \usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
+\usepackage{float}
 
 %-----------------------------------------------------------------
 %	COLUMNS
@@ -108,18 +109,6 @@ Having obtained the starting dataset, a series of \textit{Text Processing} opera
 
 % immagine con esempio di frase prima e dopo processing
 
-Once the corpus of texts had been properly processed, we moved on to the next stage of text representation.
-
-\section{Text Representation}
-Text Representation is the process to represent text with graphical methods. Considering the purposes of the project, the reviews were represented in structured form according to two methods: \textit{Bag of Words} and \textit{Tf-Idf}.\\
-The Bag of Words representation identifies each document by a vector in which contains the number of occurrences of each word. This model doesn't consider grammar and order of words.\\
-In the Tf-Idf representation, the number of occurrences of each word is weighted against the inverse of the word's presence in the corpus.\\
-The weights, called \textit{Tf-Idf} weights, are the product of the two indices \textit{Tf} and \textit{Idf}:
-\begin{center}
-$w_{t,d} = \frac{tf_{t,d}}{max (tf_{t_i,d})} \times log(\frac{N}{df_t})$
-\end{center}
-Where the Term Frequency \textit{$tf_{t,d}$} represent the frequency of the term \textit{t} in the document \textit{d}, divided by the frequency of the most occurring word in the document to prevent bias towards longer documents; and the the Inverse Document Frequency \textit{$idf_t$} represents the inverse of the informativeness of the document for a term \textit{t}.\\
-The two representations were implemented through two features of the sklearn package in python: CountVectorizer for Bag of Words, TfidfVectorizer for Tf-Idf. The range of n-grams chosen for both was 1-2, that is, Uni-grams and Bi-grams.\\
 Below we can observe some basic statistics for the train and the test set. Precisely, the number of words in the corpus, and the average review length.
 
 \begin{table}[ht]
@@ -133,20 +122,103 @@ Below we can observe some basic statistics for the train and the test set. Preci
 \caption{Statistics for train and test data}
 \end{table}
 
+In addition, we built two WordClouds, one for training set texts, the other for test set texts.
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.1]{./images/WordCloud_train.png}
+\end{center}
+  \caption{WordCloud - Training data}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.1]{./images/WordCloud_test.png}
+\end{center}
+  \caption{WordCloud - Test data}
+\end{figure}
+
+Once the corpus of texts had been properly processed, we moved on to the next stage of text representation.
+
+\section{Text Representation}
+Text Representation is the process to represent text with graphical methods. Considering the purposes of the project, the reviews were represented in structured form according to two methods: \textit{Bag of Words} and \textit{Tf-Idf}.\\
+The Bag of Words representation identifies each document by a vector in which contains the number of occurrences of each word. This model doesn't consider grammar and order of words.\\
+In the Tf-Idf representation, the number of occurrences of each word is weighted against the inverse of the word's presence in the corpus.\\
+The weights, called \textit{Tf-Idf} weights, are the product of the two indices \textit{Tf} and \textit{Idf}:
+\begin{center}
+$w_{t,d} = \frac{tf_{t,d}}{max (tf_{t_i,d})} \times log(\frac{N}{df_t})$
+\end{center}
+Where the Term Frequency \textit{$tf_{t,d}$} represent the frequency of the term \textit{t} in the document \textit{d}, divided by the frequency of the most occurring word in the document to prevent bias towards longer documents; and the the Inverse Document Frequency \textit{$idf_t$} represents the inverse of the informativeness of the document for a term \textit{t}.\\
+The two representations were implemented through two features of the sklearn package in python: CountVectorizer for Bag of Words, TfidfVectorizer for Tf-Idf. The range of n-grams chosen for both was 1-2, that is, Uni-grams and Bi-grams.
+
 \section{Text Classification}
-...
+Text Classification is the activity of predicting which data items belongs to a predefined finite set of classes. There are many types of classification, in our case it is \textit{Binary Classification}, where each item belongs to exactly one class in a set of two (positive or negative).\\
+To pursue the goals of our project, we chose to use three classification algorithms, and for each of them we used the two types of text representation developed earlier.\\
+The selected algorithms are as follows: Support Vector Machine (SVM), Multilayer Perceptron (MLP), and Linear Regression (LR).
 
 \subsection{SVM}
-...
+Support vector machines (SVMs) are a set of supervised learning methods used for classification and other tasks \cite{SVM}. An SVM classifies data by finding the best hyperplane that separates all data points of one class from those of the other class. The best hyperplane for an SVM means the one with the largest margin between the two classes \cite{SVM2}. The advantages of support vector machines are its effectiveness in high dimensional spaces, its effectiveness in cases where the number of dimensions is greater than the number of samples, its memory efficiency, and its versatility. On the other side, the disadvantages of support vector machines include the fact that if the number of features is much greater than the number of samples, avoiding over-fitting in choosing Kernel functions and regularization term is crucial, and also SVMs do not directly provide probability estimates.\\
+In our case, we used the LinearSVC package built on scikit-learn.
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.6]{./images/SVM_BoW.png}
+\end{center}
+  \caption{Classification report - SVM with Bag-of-Words}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.6]{./images/SVM_TFIDF.png}
+\end{center}
+  \caption{Classification report - SVM with Tf-Idf}
+\end{figure}
+
+As we can observe above, accuracy is better with Bag-of-Words, with a value of 0.87.
 
 \subsection{Multilayer Perceptron}
-...
+Multilayer perceptron (MLP) is a supplement of feed forward neural network. It consists of three types of layers: the input layer, output layer and hidden layer \cite{MLP}.\\
+The input layer receives the input signal to be processed. The required task such as prediction and classification is performed by the output layer. An arbitrary number of hidden layers that are placed in between the input and output layer are the true computational engine of the MLP.\\
+In our case we exploited the potential of Keras. Keras is an open source library for machine learning and neural networks in Python.
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.6]{./images/MLP_BoW.png}
+\end{center}
+  \caption{Classification report - MLP with Bag-of-Words}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.6]{./images/MLP_TFIDF.png}
+\end{center}
+  \caption{Classification report - MLP with Tf-Idf}
+\end{figure}
+
+As we can observe above, accuracy is also better with Bag-of-Words, with a value of 0.83.
 
 \subsection{Logistic Regression}
-...
+Logistic Regression is a statistical approach and a Machine Learning algorithm that is used for classification problems and is based on the concept of probability \cite{LR}. It is widely used when the classification problem at hand is binary. Logistics regression uses the sigmoid function to return the probability of a label.\\
+In our case, we used the LogisticRegression package built on scikit-learn.
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.6]{./images/LR_BoW.png}
+\end{center}
+  \caption{Classification report - LR with Bag-of-Words}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.6]{./images/LR_TFIDF.png}
+\end{center}
+  \caption{Classification report - LR with Tf-Idf}
+\end{figure}
+
+As we can observe above, in this case instead the accuracy is better with Tf-Idf, with a value of 0.87.
 
 \subsection{Evaluation}
-...
+The highest accuracy value is obtained with the Logistic Regression algorithm with Tf-Idf weights. With the Support Vector Machine and Multilayer Perceptron algorithms, on the other hand, higher accuracy values are obtained with Bag-of-Words text representations.
 
 \section{Text Clustering}
 ...
