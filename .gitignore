@@ -2,3 +2,4 @@ IMDB
 IMDB/**
 imdb.vocab
 *.save
+notebooks/.DS_Store
