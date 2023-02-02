@@ -3,3 +3,6 @@ IMDB/**
 imdb.vocab
 *.save
 notebooks/.DS_Store
+*.save
+*.h5
+notebooks/checkpoint/best_model_bow.h5

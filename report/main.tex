@@ -82,15 +82,14 @@
 %-----------------------------------------------------------------
 
 \section{Introduction}
-The project aims to analyze the dataset "IMDB reviews" \cite{} through text mining techniques, specifically through \textit{Text Classification} and \textit{Text Clustering}. The dataset contains a total amount of 50000 user-released reviews on the IMDB platform, divided in half between training and testing. The dataset is ideal for performing a binary sentiment classification task, the first objective of our analysis. Next, we decided to exploit Text Clustering techniques with the goal of identifying different clusters within the text.\\
+The project aims to analyze the dataset "IMDB reviews" through text mining techniques, specifically through \textit{Text Classification} and \textit{Text Clustering}. The dataset contains a total amount of 50000 user-released reviews on the IMDB platform, divided in half between training and testing. The dataset is ideal for performing a binary sentiment classification task, the first objective of our analysis. Next, we decided to exploit text clustering techniques with the goal of identifying different clusters within the text.\\
 Text Classification is the activity of predicting which data items belongs to a predefined finite set of classes. There are many types of classification, in our case it is \textit{Binary Classification}, where each item belongs to exactly one class in a set of two (positive or negative).\\
 In addition, text classification may be performed according to several dimensions ('axes') orthogonal to each other. For example, by topic (the most frequent case), by sentiment - our case -, by language, by type, by author, by native language, by gender, and more.\\
+Text clustering, on the other hand, is the task of grouping a set of unlabeled texts in such a way that texts in the same cluster are more similar to each other than to those in other clusters.
 
 \section{Data}
-As stated before, the dataset used contains a total of 50000 user reviews on the IMDB platform, a platform that describes itself in the following manner :"IMDb is the world's most popular and authoritative source for movie, TV and celebrity content. Find ratings and reviews for the newest movie and TV shows."
-
-Large Movie Review Dataset.\\
-This is a dataset for binary sentiment classification containing substantially more data than previous benchmark datasets. We provide a set of 25,000 highly polar movie reviews for training, and 25,000 for testing. There is additional unlabeled data for use as well. Raw text and already processed bag of words formats are provided.\\
+As stated before, the dataset used contains a total of 50000 user reviews on the IMDB platform, a platform that describes itself in the following manner :"IMDb is the world's most popular and authoritative source for movie, TV and celebrity content. Find ratings and reviews for the newest movie and TV shows" \cite{IMDB}.\\
+The dataset is also defined as a "Large Movie Review Dataset".\\
 From an initial exploration of the data, we can observe that the dataset does not provide information about the date and reference film of the review, or any other indication, but contains only the text of the review and the extracted sentiment - positive or negative.\\
 The data, initially divided into training and testing, but also between positive and negative sentiment, were merged, so that there would be a single dataset for the 25000 reviews to be used in the training phase and the 25000 reviews to be used in the testing phase.\\
 Finally, the dataset contains precisely 12500 reviews labeled as positive and as many labeled as negative, both training and testing.
@@ -98,17 +97,41 @@ Finally, the dataset contains precisely 12500 reviews labeled as positive and as
 \section{Text Processing}
 Having obtained the starting dataset, a series of \textit{Text Processing} operations were performed:
 \begin{itemize}
-	\item \textit{Remove Numbers}, x;
-	\item \textit{Remove StopWords}, x;
-	\item \textit{Remove Punctuation}, x;
-	\item \textit{Remove Extra Space}, x;
-	\item \textit{Tokenization}, x;
-	\item \textit{Lower Case}, x;
-	\item \textit{Lemmatization}, x.
+	\item \textit{Remove Numbers}, all numbers within the text have been removed;
+	\item \textit{Remove StopWords}, all words in the stopwords list have been removed;
+	\item \textit{Remove Punctuation}, all punctuation has been removed;
+	\item \textit{Remove Extra Space}, all extra spaces within the text have been removed;
+	\item \textit{Tokenization}, the process of breaking down a text into units called tokens;
+	\item \textit{Lower Case}, all words were converted to lower case;
+	\item \textit{Lemmatization}, the process of grouping together the inflected forms of a word.
 \end{itemize}
 
+% immagine con esempio di frase prima e dopo processing
+
+Once the corpus of texts had been properly processed, we moved on to the next stage of text representation.
+
 \section{Text Representation}
-...
+Text Representation is the process to represent text with graphical methods. Considering the purposes of the project, the reviews were represented in structured form according to two methods: \textit{Bag of Words} and \textit{Tf-Idf}.\\
+The Bag of Words representation identifies each document by a vector in which contains the number of occurrences of each word. This model doesn't consider grammar and order of words.\\
+In the Tf-Idf representation, the number of occurrences of each word is weighted against the inverse of the word's presence in the corpus.\\
+The weights, called \textit{Tf-Idf} weights, are the product of the two indices \textit{Tf} and \textit{Idf}:
+\begin{center}
+$w_{t,d} = \frac{tf_{t,d}}{max (tf_{t_i,d})} \times log(\frac{N}{df_t})$
+\end{center}
+Where the Term Frequency \textit{$tf_{t,d}$} represent the frequency of the term \textit{t} in the document \textit{d}, divided by the frequency of the most occurring word in the document to prevent bias towards longer documents; and the the Inverse Document Frequency \textit{$idf_t$} represents the inverse of the informativeness of the document for a term \textit{t}.\\
+The two representations were implemented through two features of the sklearn package in python: CountVectorizer for Bag of Words, TfidfVectorizer for Tf-Idf. The range of n-grams chosen for both was 1-2, that is, Uni-grams and Bi-grams.\\
+Below we can observe some basic statistics for the train and the test set. Precisely, the number of words in the corpus, and the average review length.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c c c }
+	 & Train & Test  \\
+	\hline
+	Number of words & 24902 & 24798  \\
+	Average review length & 685.01 & 668.02  \\
+\end{tabular}
+\caption{Statistics for train and test data}
+\end{table}
 
 \section{Text Classification}
 ...
