@@ -2354,7 +2354,9 @@
     <bcf:citekey order="3" intorder="1">SVM2</bcf:citekey>
     <bcf:citekey order="4" intorder="1">MLP</bcf:citekey>
     <bcf:citekey order="5" intorder="1">LR</bcf:citekey>
-    <bcf:citekey order="6" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">textClustering</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">DBSCAN</bcf:citekey>
+    <bcf:citekey order="8" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

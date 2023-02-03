@@ -221,16 +221,63 @@ As we can observe above, in this case instead the accuracy is better with Tf-Idf
 The highest accuracy value is obtained with the Logistic Regression algorithm with Tf-Idf weights. With the Support Vector Machine and Multilayer Perceptron algorithms, on the other hand, higher accuracy values are obtained with Bag-of-Words text representations.
 
 \section{Text Clustering}
-...
+Text clustering is the task of grouping a set of unlabeled texts in such a way that texts in the same cluster are more similar to each other than to those in other clusters. Text clustering algorithms process text and determine if natural clusters (groups) exist in the data \cite{textClustering}.\\
+The big idea is that documents can be represented numerically as vectors of features. The similarity in text can be compared by measuring the distance between these feature vectors. Objects that are near each other should belong to the same cluster. Objects that are far from each other should belong to different clusters.\\
+Clustering can be divided into two groups:
+\begin{itemize}
+	\item \textit{Hard Clustering}: each item is assigned to only one cluster;
+	\item \textit{Soft Clustering}: an item can belong to multiple clusters.
+\end{itemize}
+
+There are also different types of clustering structure:
+\begin{itemize}
+	\item Partitional, a division of the set of data objects into non-overlapping subsets (clusters) such that each data object is in exactly one subset vs Hierarchical, sub-clusters organized as a tree;
+	\item Exclusive, each data object is assigned to a single cluster vs Overlapping, data can be assigned in more than one cluster;
+	\item Complete, every data is assigned to a cluster vs Partial, where every data is not necessary assigned to a cluster.
+\end{itemize}
+
+% The mapping from textual data to real-valued vectors is called feature extraction. One of the simplest techniques to numerically represent text is Bag of Words (BOW). In BOW, we make a list of unique words in the text corpus called vocabulary. Then we can represent each sentence or document as a vector, with each word represented as 1 for presence and 0 for absence. Another representation is to count the number of times each word appears in a document. The most popular approach is using the Term Frequency-Inverse Document Frequency (TF-IDF) technique.
+
+We used two different clustering algorithms to identify different clusters from the total number of reviews in the dataset. Before we began, however, we performed dimensionality reduction of the total dataset - training plus testing - using Singular Value Decomposition (SVD).\\
 
 \subsection{DBSCAN}
-...
+DBSCAN, or \textit{Density-Based Spatial Clustering of Applications with Noise}, is a clustering algorithm. It can be used for clustering data points based on density, by grouping together areas with many samples. This makes it especially useful for performing clustering under noisy conditions.\\
+Density-based means that it will zoom into areas that have great density, or in other words a large amount of samples closely together. Spatial clustering means that it performs clustering by performing actions in the feature space. In other words, whereas some clustering techniques work by sending messages between points, DBSCAN performs distance measures in the space to identify which samples belong to each other. Clustering speaks for itself, and applications with noise means that the technique can be used with noisy datasets \cite{DBSCAN}.
+
+% immagine cluster
 
 \subsection{K-means}
-...
+K-means clustering is a type of unsupervised learning method. The goal of this algorithm is to find groups in the data, whereas the number of groups is represented by the variable k.\\
+The k-means algorithms take input data and a predefined number of clusters as input. This method does not guarantee convergence to the global solution, and its results may depend upon the initial cluster center.\\
+The k-means algorithm is defined as follows:
+\begin{enumerate}
+	\item Select k objects as centroids;
+	\item Form k clusters and assign each document to the closest centroid;
+	\item Compute the centroid for each cluster;
+	\item Go to 1. until centroids do not change.
+\end{enumerate}
+
+In our case, we chose 4 as the number of clusters to be specified to the algorithm.
+
+% immagine cluster
 
 \subsection{Evaluation}
-...
+It is difficult to evaluate the validation of a clustering algorithm. A good clustering algorithm will produce high quality clusters in which the intra-class (that is, intra-cluster) similarity is high, and the inter-class similarity is low.\\
+The most important Internal Evaluation index is the Silhouette Coefficient, that measures how well an observation is clustered and estimates the average distance between clusters.\\
+The Silhouette Coefficient is calculated using the mean intra-cluster distance $a(i)$ and the mean nearest cluster distance $b(i)$ for each sample $i$:\\
+
+\begin{center}
+$S(i) = \frac{b(i) - a(i)}{max(a(i), b(i))}$
+\end{center}
+
+$S(i)$ will lie between [$ -1,1 $]:
+\begin{itemize}
+	\item If the Silhouette value is close to 1, the sample is well clustered and already assigned to a very appropriate cluster;
+	\item If Silhouette value is about to 0, the sample could be assigned to another cluster closest to it and the sample lies equally far away from both the clusters. That means it indicates overlapping clusters;
+	\item If Silhouette value is close to -1, the sample is misclassified and is merely placed somewhere in between the clusters.
+\end{itemize}
+
+% valori coefficiente e wordcloud dei cluster
 
 \section{Summary}
 ...

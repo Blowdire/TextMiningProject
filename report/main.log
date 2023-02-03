@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.8.30)  2 FEB 2023 23:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.8.30)  3 FEB 2023 17:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1094,7 +1094,33 @@ Package fancyhdr Warning: \headheight is too small (11.0pt):
 [3 <./images/SVM_BoW.png> <./images/SVM_TFIDF.png> <./images/MLP_BoW.png> <./im
 ages/MLP_TFIDF.png> <./images/LR_BoW.png> <./images/LR_TFIDF.png>]
 
-LaTeX Warning: Empty bibliography on input line 241.
+LaTeX Warning: Citation 'textClustering' on page 4 undefined on input line 224.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
+
+ []
+
+
+LaTeX Warning: Citation 'DBSCAN' on page 4 undefined on input line 245.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--268
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (11.0pt): 
+(fancyhdr)                Make it at least 30.45605pt, for example:
+(fancyhdr)                \setlength{\headheight}{30.45605pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-19.45605pt}.
+
+[4]
+
+LaTeX Warning: Empty bibliography on input line 288.
 
 
 AED: lastpage setting LastPage
@@ -1106,7 +1132,7 @@ Package fancyhdr Warning: \headheight is too small (11.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-19.45605pt}.
 
-[4
+[5
 
 ] (main.aux)
 
@@ -1124,11 +1150,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24145 strings out of 479718
- 424779 string characters out of 2872485
- 1279717 words of memory out of 3000000
- 42232 multiletter control sequences out of 15000+600000
- 522447 words of font info for 257 fonts, out of 8000000 for 9000
+ 24166 strings out of 479718
+ 424975 string characters out of 2872485
+ 1279757 words of memory out of 3000000
+ 42234 multiletter control sequences out of 15000+600000
+ 523509 words of font info for 267 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  72i,12n,77p,1003b,1896s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/FC/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Us
@@ -1141,9 +1167,9 @@ uhvr8a.pfb><C:/Users/FC/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utm
 b8a.pfb><C:/Users/FC/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a
 .pfb><C:/Users/FC/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on main.pdf (4 pages, 1108805 bytes).
+Output written on main.pdf (5 pages, 1118146 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
+ 191 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
  76953 words of extra memory for PDF output out of 89155 (max. 10000000)
 
