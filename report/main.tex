@@ -236,15 +236,22 @@ There are also different types of clustering structure:
 	\item Complete, every data is assigned to a cluster vs Partial, where every data is not necessary assigned to a cluster.
 \end{itemize}
 
+The goals of text clustering for a reviews dataset are various and can include segmentation, dividing the reviews into meaningful groups based on some criteria (like sentiment), to identify patterns and trends within the data; summarization, to create a compact representation of the reviews by summarizing topics, sentiments, or keywords; and, in general, to better understand the data and users' opinions and preferences. But also, to enable a more efficient information retrieval, and to reduce the number of reviews by grouping similar reviews together.\\
 % The mapping from textual data to real-valued vectors is called feature extraction. One of the simplest techniques to numerically represent text is Bag of Words (BOW). In BOW, we make a list of unique words in the text corpus called vocabulary. Then we can represent each sentence or document as a vector, with each word represented as 1 for presence and 0 for absence. Another representation is to count the number of times each word appears in a document. The most popular approach is using the Term Frequency-Inverse Document Frequency (TF-IDF) technique.
-
 We used two different clustering algorithms to identify different clusters from the total number of reviews in the dataset. Before we began, however, we performed dimensionality reduction of the total dataset - training plus testing - using Singular Value Decomposition (SVD).\\
+SVD can be useful for text clustering as it provides a computationally efficient and effective way to reduce the dimensionality of large and sparse document-term matrices. SVD can transform the high-dimensional document-term matrix into a low-dimensional representation, which can then be used to cluster the documents based on their similarity. The reduced dimensionality representation of documents obtained through SVD it's used as input to the clustering algorithms.
 
 \subsection{DBSCAN}
-DBSCAN, or \textit{Density-Based Spatial Clustering of Applications with Noise}, is a clustering algorithm. It can be used for clustering data points based on density, by grouping together areas with many samples. This makes it especially useful for performing clustering under noisy conditions.\\
-Density-based means that it will zoom into areas that have great density, or in other words a large amount of samples closely together. Spatial clustering means that it performs clustering by performing actions in the feature space. In other words, whereas some clustering techniques work by sending messages between points, DBSCAN performs distance measures in the space to identify which samples belong to each other. Clustering speaks for itself, and applications with noise means that the technique can be used with noisy datasets \cite{DBSCAN}.
+DBSCAN, or \textit{Density-Based Spatial Clustering of Applications with Noise}, is an unsupervised machine learning algorithm used for text clustering.  It works by grouping together text documents that are similar to each other based on their density of word occurrences. It can be used for clustering data points based on density, by grouping together areas with many samples. This makes it especially useful for performing clustering under noisy conditions.\\
+Density-based means that it will zoom into areas that have great density, or in other words a large amount of samples closely together. Spatial clustering means that it performs clustering by performing actions in the feature space. In other words, whereas some clustering techniques work by sending messages between points, DBSCAN performs distance measures in the space to identify which samples belong to each other. Clustering speaks for itself, and applications with noise means that the technique can be used with noisy datasets \cite{DBSCAN}.\\
+The algorithm starts by selecting a random document as a "seed" and then finds all the other documents that are close to it, where "close" is defined by a user-specified distance metric (e.g. cosine similarity). If a sufficient number of documents are found to be close to the seed, they are all grouped together into a cluster. The algorithm then repeats this process for each cluster, until all the documents have been assigned to a cluster. The key advantage of DBSCAN is that it can identify clusters of arbitrary shapes, which is useful in text clustering where clusters may not be spherical.
 
-% immagine cluster
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.5]{./images/dbscan.png}
+\end{center}
+  \caption{DBSCAN - Clustering}
+\end{figure}
 
 \subsection{K-means}
 K-means clustering is a type of unsupervised learning method. The goal of this algorithm is to find groups in the data, whereas the number of groups is represented by the variable k.\\
@@ -259,10 +266,15 @@ The k-means algorithm is defined as follows:
 
 In our case, we chose 4 as the number of clusters to be specified to the algorithm.
 
-% immagine cluster
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.5]{./images/k-means.png}
+\end{center}
+  \caption{k-means - Clustering}
+\end{figure}
 
 \subsection{Evaluation}
-It is difficult to evaluate the validation of a clustering algorithm. A good clustering algorithm will produce high quality clusters in which the intra-class (that is, intra-cluster) similarity is high, and the inter-class similarity is low.\\
+A good clustering algorithm will produce high quality clusters in which the intra-class (that is, intra-cluster) similarity is high, and the inter-class similarity is low.\\
 The most important Internal Evaluation index is the Silhouette Coefficient, that measures how well an observation is clustered and estimates the average distance between clusters.\\
 The Silhouette Coefficient is calculated using the mean intra-cluster distance $a(i)$ and the mean nearest cluster distance $b(i)$ for each sample $i$:\\
 
@@ -277,7 +289,22 @@ $S(i)$ will lie between [$ -1,1 $]:
 	\item If Silhouette value is close to -1, the sample is misclassified and is merely placed somewhere in between the clusters.
 \end{itemize}
 
-% valori coefficiente e wordcloud dei cluster
+The following are the value of the Silhouette coefficient for the selected algorithms:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c c c }
+	 & DBSCAN & K-means  \\
+	\hline
+	Silhouette Index & 0.239 & 0.017  \\
+\end{tabular}
+\caption{Silhouette Coefficient}
+\end{table}
+
+As we can observe from the above table, the Silhouette value for the DBSCAN algorithm is higher than for the K-means algorithm.\\
+We can state that the clusters obtained with DBSCAN are more appropriate and the sample is better clustered than with K-means.
+
+%wordcloud dei cluster
 
 \section{Summary}
 ...
