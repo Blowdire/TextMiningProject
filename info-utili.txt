@@ -18,8 +18,6 @@ Simili:
 - [https://realpython.com/python-keras-text-classification/#what-is-a-word-embedding]
 - [https://www.kaggle.com/code/lakshmi25npathi/sentiment-analysis-of-imdb-movie-reviews]
 
-Abstract report: ...diverse tecniche di classificazione e valutazione e diverse tecniche di clustering.
-
 Other popular choices for TC include:
 - Boosted Decision Stumps (One level decision tree);
 - Logistic Regression;

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.8.30)  4 FEB 2023 11:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.8.30)  5 FEB 2023 12:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1019,18 +1019,18 @@ tu-a-tion has been re-moved;
 <./images/WordCloud_train.png, id=97, 2007.5pt x 1003.75pt>
 File: ./images/WordCloud_train.png Graphic file (type png)
 <use ./images/WordCloud_train.png>
-Package pdftex.def Info: ./images/WordCloud_train.png  used on input line 129.
+Package pdftex.def Info: ./images/WordCloud_train.png  used on input line 133.
 (pdftex.def)             Requested size: 200.76175pt x 100.38087pt.
 <./images/WordCloud_test.png, id=98, 2007.5pt x 1003.75pt>
 File: ./images/WordCloud_test.png Graphic file (type png)
 <use ./images/WordCloud_test.png>
-Package pdftex.def Info: ./images/WordCloud_test.png  used on input line 136.
+Package pdftex.def Info: ./images/WordCloud_test.png  used on input line 140.
 (pdftex.def)             Requested size: 200.76175pt x 100.38087pt.
 
-LaTeX Warning: Citation 'SVM' on page 2 undefined on input line 160.
+LaTeX Warning: Citation 'SVM' on page 2 undefined on input line 165.
 
 
-LaTeX Warning: Citation 'SVM2' on page 2 undefined on input line 160.
+LaTeX Warning: Citation 'SVM2' on page 2 undefined on input line 165.
 
 
 Package fancyhdr Warning: \headheight is too small (11.0pt): 
@@ -1042,47 +1042,43 @@ Package fancyhdr Warning: \headheight is too small (11.0pt):
 
 [2 <./images/WordCloud_train.png (PNG copy)> <./images/WordCloud_test.png (PNG 
 copy)>]
-<./images/SVM_BoW.png, id=111, 334.24875pt x 150.5625pt>
+<./images/SVM_BoW.png, id=111, 328.72812pt x 132.99687pt>
 File: ./images/SVM_BoW.png Graphic file (type png)
 <use ./images/SVM_BoW.png>
-Package pdftex.def Info: ./images/SVM_BoW.png  used on input line 165.
-(pdftex.def)             Requested size: 200.55078pt x 90.33818pt.
-<./images/SVM_TFIDF.png, id=113, 325.71687pt x 145.04187pt>
+Package pdftex.def Info: ./images/SVM_BoW.png  used on input line 170.
+(pdftex.def)             Requested size: 197.23839pt x 79.79872pt.
+<./images/SVM_TFIDF.png, id=113, 329.73187pt x 127.97812pt>
 File: ./images/SVM_TFIDF.png Graphic file (type png)
 <use ./images/SVM_TFIDF.png>
-Package pdftex.def Info: ./images/SVM_TFIDF.png  used on input line 172.
-(pdftex.def)             Requested size: 195.43163pt x 87.02579pt.
+Package pdftex.def Info: ./images/SVM_TFIDF.png  used on input line 177.
+(pdftex.def)             Requested size: 197.84064pt x 76.78745pt.
 
 
-LaTeX Warning: Citation 'MLP' on page 3 undefined on input line 180.
+LaTeX Warning: Citation 'MLP' on page 3 undefined on input line 185.
 
-<./images/MLP_BoW.png, id=114, 349.80687pt x 138.01563pt>
+<./images/MLP_BoW.png, id=114, 327.2225pt x 116.435pt>
 File: ./images/MLP_BoW.png Graphic file (type png)
 <use ./images/MLP_BoW.png>
-Package pdftex.def Info: ./images/MLP_BoW.png  used on input line 186.
-(pdftex.def)             Requested size: 209.88574pt x 82.81pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<./images/MLP_TFIDF.png, id=115, 326.72063pt x 143.53625pt>
+Package pdftex.def Info: ./images/MLP_BoW.png  used on input line 191.
+(pdftex.def)             Requested size: 196.335pt x 69.86153pt.
+<./images/MLP_TFIDF.png, id=115, 325.215pt x 114.92938pt>
 File: ./images/MLP_TFIDF.png Graphic file (type png)
 <use ./images/MLP_TFIDF.png>
-Package pdftex.def Info: ./images/MLP_TFIDF.png  used on input line 193.
-(pdftex.def)             Requested size: 196.03387pt x 86.1224pt.
+Package pdftex.def Info: ./images/MLP_TFIDF.png  used on input line 198.
+(pdftex.def)             Requested size: 195.1305pt x 68.95815pt.
 
+LaTeX Warning: Citation 'LR' on page 3 undefined on input line 206.
 
-LaTeX Warning: Citation 'LR' on page 3 undefined on input line 201.
-
-<./images/LR_BoW.png, id=116, 329.73187pt x 143.53625pt>
+<./images/LR_BoW.png, id=116, 331.73938pt x 123.46124pt>
 File: ./images/LR_BoW.png Graphic file (type png)
 <use ./images/LR_BoW.png>
-Package pdftex.def Info: ./images/LR_BoW.png  used on input line 206.
-(pdftex.def)             Requested size: 197.84064pt x 86.1224pt.
-<./images/LR_TFIDF.png, id=117, 335.75438pt x 148.05313pt>
+Package pdftex.def Info: ./images/LR_BoW.png  used on input line 211.
+(pdftex.def)             Requested size: 199.04515pt x 74.0773pt.
+<./images/LR_TFIDF.png, id=117, 327.2225pt x 123.46124pt>
 File: ./images/LR_TFIDF.png Graphic file (type png)
 <use ./images/LR_TFIDF.png>
-Package pdftex.def Info: ./images/LR_TFIDF.png  used on input line 213.
-(pdftex.def)             Requested size: 201.45418pt x 88.83255pt.
+Package pdftex.def Info: ./images/LR_TFIDF.png  used on input line 218.
+(pdftex.def)             Requested size: 196.335pt x 74.0773pt.
 
 Package fancyhdr Warning: \headheight is too small (11.0pt): 
 (fancyhdr)                Make it at least 30.45605pt, for example:
@@ -1094,16 +1090,16 @@ Package fancyhdr Warning: \headheight is too small (11.0pt):
 [3 <./images/SVM_BoW.png> <./images/SVM_TFIDF.png> <./images/MLP_BoW.png> <./im
 ages/MLP_TFIDF.png> <./images/LR_BoW.png> <./images/LR_TFIDF.png>]
 
-LaTeX Warning: Citation 'textClustering' on page 4 undefined on input line 224.
+LaTeX Warning: Citation 'textClustering' on page 4 undefined on input line 229.
 
 
 
-LaTeX Warning: Citation 'DBSCAN' on page 4 undefined on input line 246.
+LaTeX Warning: Citation 'DBSCAN' on page 4 undefined on input line 253.
 
 <./images/dbscan.png, id=135, 417.7206pt x 312.2064pt>
 File: ./images/dbscan.png Graphic file (type png)
 <use ./images/dbscan.png>
-Package pdftex.def Info: ./images/dbscan.png  used on input line 251.
+Package pdftex.def Info: ./images/dbscan.png  used on input line 258.
 (pdftex.def)             Requested size: 208.85979pt x 156.10281pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1121,15 +1117,80 @@ Package fancyhdr Warning: \headheight is too small (11.0pt):
 <./images/k-means.png, id=141, 409.7709pt x 312.2064pt>
 File: ./images/k-means.png Graphic file (type png)
 <use ./images/k-means.png>
-Package pdftex.def Info: ./images/k-means.png  used on input line 271.
+Package pdftex.def Info: ./images/k-means.png  used on input line 278.
 (pdftex.def)             Requested size: 204.88495pt x 156.10281pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--280
+Underfull \hbox (badness 10000) in paragraph at lines 284--287
 
  []
 
+<./images/dbscan_wordcloud1.png, id=142, 372.1905pt x 193.6836pt>
+File: ./images/dbscan_wordcloud1.png Graphic file (type png)
+<use ./images/dbscan_wordcloud1.png>
+Package pdftex.def Info: ./images/dbscan_wordcloud1.png  used on input line 318
+.
+(pdftex.def)             Requested size: 186.09479pt x 96.84155pt.
+<./images/dbscan_wordcloud2.png, id=143, 372.1905pt x 193.6836pt>
+File: ./images/dbscan_wordcloud2.png Graphic file (type png)
+<use ./images/dbscan_wordcloud2.png>
+Package pdftex.def Info: ./images/dbscan_wordcloud2.png  used on input line 324
+.
+(pdftex.def)             Requested size: 186.09479pt x 96.84155pt.
 
-LaTeX Warning: Empty bibliography on input line 300.
+Package fancyhdr Warning: \headheight is too small (11.0pt): 
+(fancyhdr)                Make it at least 30.45605pt, for example:
+(fancyhdr)                \setlength{\headheight}{30.45605pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-19.45605pt}.
+
+[5 <./images/dbscan.png> <./images/k-means.png> <./images/dbscan_wordcloud1.png
+>]
+<./images/dbscan_wordcloud3.png, id=160, 372.1905pt x 193.6836pt>
+File: ./images/dbscan_wordcloud3.png Graphic file (type png)
+<use ./images/dbscan_wordcloud3.png>
+Package pdftex.def Info: ./images/dbscan_wordcloud3.png  used on input line 330
+.
+(pdftex.def)             Requested size: 186.09479pt x 96.84155pt.
+<./images/dbscan_wordcloud4.png, id=161, 372.1905pt x 193.6836pt>
+File: ./images/dbscan_wordcloud4.png Graphic file (type png)
+<use ./images/dbscan_wordcloud4.png>
+Package pdftex.def Info: ./images/dbscan_wordcloud4.png  used on input line 336
+.
+(pdftex.def)             Requested size: 186.09479pt x 96.84155pt.
+<./images/dbscan_wordcloud5.png, id=162, 372.1905pt x 193.6836pt>
+File: ./images/dbscan_wordcloud5.png Graphic file (type png)
+<use ./images/dbscan_wordcloud5.png>
+Package pdftex.def Info: ./images/dbscan_wordcloud5.png  used on input line 342
+.
+(pdftex.def)             Requested size: 186.09479pt x 96.84155pt.
+<./images/kmeans_wordcloud1.png, id=163, 372.1905pt x 193.6836pt>
+File: ./images/kmeans_wordcloud1.png Graphic file (type png)
+<use ./images/kmeans_wordcloud1.png>
+Package pdftex.def Info: ./images/kmeans_wordcloud1.png  used on input line 350
+.
+(pdftex.def)             Requested size: 186.09479pt x 96.84155pt.
+<./images/kmeans_wordcloud2.png, id=164, 372.1905pt x 193.6836pt>
+File: ./images/kmeans_wordcloud2.png Graphic file (type png)
+<use ./images/kmeans_wordcloud2.png>
+Package pdftex.def Info: ./images/kmeans_wordcloud2.png  used on input line 356
+.
+(pdftex.def)             Requested size: 186.09479pt x 96.84155pt.
+<./images/kmeans_wordcloud3.png, id=165, 372.1905pt x 193.6836pt>
+File: ./images/kmeans_wordcloud3.png Graphic file (type png)
+<use ./images/kmeans_wordcloud3.png>
+Package pdftex.def Info: ./images/kmeans_wordcloud3.png  used on input line 362
+.
+(pdftex.def)             Requested size: 186.09479pt x 96.84155pt.
+<./images/kmeans_wordcloud4.png, id=166, 372.1905pt x 193.6836pt>
+File: ./images/kmeans_wordcloud4.png Graphic file (type png)
+<use ./images/kmeans_wordcloud4.png>
+Package pdftex.def Info: ./images/kmeans_wordcloud4.png  used on input line 368
+.
+(pdftex.def)             Requested size: 186.09479pt x 96.84155pt.
+
+
+LaTeX Warning: Empty bibliography on input line 378.
 
 
 AED: lastpage setting LastPage
@@ -1141,7 +1202,10 @@ Package fancyhdr Warning: \headheight is too small (11.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-19.45605pt}.
 
-[5 <./images/dbscan.png> <./images/k-means.png>] (main.aux)
+[6 <./images/dbscan_wordcloud2.png> <./images/dbscan_wordcloud3.png> <./images/
+dbscan_wordcloud4.png> <./images/dbscan_wordcloud5.png> <./images/kmeans_wordcl
+oud1.png> <./images/kmeans_wordcloud2.png> <./images/kmeans_wordcloud3.png> <./
+images/kmeans_wordcloud4.png>] (main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1157,11 +1221,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24197 strings out of 479718
- 425458 string characters out of 2872485
+ 24284 strings out of 479718
+ 427885 string characters out of 2872485
  1279761 words of memory out of 3000000
- 42246 multiletter control sequences out of 15000+600000
- 524104 words of font info for 277 fonts, out of 8000000 for 9000
+ 42305 multiletter control sequences out of 15000+600000
+ 525330 words of font info for 283 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  72i,12n,77p,1003b,1896s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/FC/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Us
@@ -1174,9 +1238,9 @@ uhvr8a.pfb><C:/Users/FC/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utm
 b8a.pfb><C:/Users/FC/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a
 .pfb><C:/Users/FC/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on main.pdf (5 pages, 1237907 bytes).
+Output written on main.pdf (6 pages, 2313300 bytes).
 PDF statistics:
- 197 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 76963 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
+ 81104 words of extra memory for PDF output out of 89155 (max. 10000000)
 

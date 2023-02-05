@@ -107,7 +107,11 @@ Having obtained the starting dataset, a series of \textit{Text Processing} opera
 	\item \textit{Lemmatization}, the process of grouping together the inflected forms of a word.
 \end{itemize}
 
-% immagine con esempio di frase prima e dopo processing
+% esempio di frase prima e dopo processing
+
+% I saw this movie at a drive-in in 1959. Until "Howard the Duck" I considered this the worst movie I had ever seen. This movie tried to combine all the genera in one; comedy, horror, teenage angst, and the hot rod that must have sired "My Mother, The Car." Maybe it deserves a second viewing to see if it is an accurate reflection of it's time.
+
+% movie drivein howard duck considered worst movie movie combine genus comedy horror teenage angst hot rod sired mother car deserves viewing accurate reflection time
 
 Below we can observe some basic statistics for the train and the test set. Precisely, the number of words in the corpus, and the average review length.
 
@@ -149,7 +153,8 @@ The weights, called \textit{Tf-Idf} weights, are the product of the two indices 
 $w_{t,d} = \frac{tf_{t,d}}{max (tf_{t_i,d})} \times log(\frac{N}{df_t})$
 \end{center}
 Where the Term Frequency \textit{$tf_{t,d}$} represent the frequency of the term \textit{t} in the document \textit{d}, divided by the frequency of the most occurring word in the document to prevent bias towards longer documents; and the the Inverse Document Frequency \textit{$idf_t$} represents the inverse of the informativeness of the document for a term \textit{t}.\\
-The two representations were implemented through two features of the sklearn package in python: CountVectorizer for Bag of Words, TfidfVectorizer for Tf-Idf. The range of n-grams chosen for both was 1-2, that is, Uni-grams and Bi-grams.
+The two representations were implemented through two features of the sklearn package in python: CountVectorizer for Bag of Words, TfidfVectorizer for Tf-Idf. The range of n-grams chosen for both was 1-3, that is, Uni-grams Bi-grams, and Tri-grams. Tri-grams (three consecutive words) provide more context for text classification tasks than single words or bigrams (two consecutive words). By capturing the relationship between three words, tri-grams can better capture the meaning and context of text, improving the accuracy of text classification models.\\
+Regarding the variable $'max\_features'$ corresponding to the maximum number of grams to be considered (the most frequent grams across the text), 10000 was chosen as the value.
 
 \section{Text Classification}
 Text Classification is the activity of predicting which data items belongs to a predefined finite set of classes. There are many types of classification, in our case it is \textit{Binary Classification}, where each item belongs to exactly one class in a set of two (positive or negative).\\
@@ -195,7 +200,7 @@ In our case we exploited the potential of Keras. Keras is an open source library
   \caption{Classification report - MLP with Tf-Idf}
 \end{figure}
 
-As we can observe above, accuracy is also better with Bag-of-Words, with a value of 0.83.
+As we can observe above, accuracy is the same for the two models, with a value of 0.83.
 
 \subsection{Logistic Regression}
 Logistic Regression is a statistical approach and a Machine Learning algorithm that is used for classification problems and is based on the concept of probability \cite{LR}. It is widely used when the classification problem at hand is binary. Logistics regression uses the sigmoid function to return the probability of a label.\\
@@ -218,7 +223,7 @@ In our case, we used the LogisticRegression package built on scikit-learn.
 As we can observe above, in this case instead the accuracy is better with Tf-Idf, with a value of 0.87.
 
 \subsection{Evaluation}
-The highest accuracy value is obtained with the Logistic Regression algorithm with Tf-Idf weights. With the Support Vector Machine and Multilayer Perceptron algorithms, on the other hand, higher accuracy values are obtained with Bag-of-Words text representations.
+The highest accuracy value is obtained with the Logistic Regression algorithm with Tf-Idf weights, and with Support Vector Machine with Bag-of-Words.
 
 \section{Text Clustering}
 Text clustering is the task of grouping a set of unlabeled texts in such a way that texts in the same cluster are more similar to each other than to those in other clusters. Text clustering algorithms process text and determine if natural clusters (groups) exist in the data \cite{textClustering}.\\
@@ -239,7 +244,9 @@ There are also different types of clustering structure:
 The goals of text clustering for a reviews dataset are various and can include segmentation, dividing the reviews into meaningful groups based on some criteria (like sentiment), to identify patterns and trends within the data; summarization, to create a compact representation of the reviews by summarizing topics, sentiments, or keywords; and, in general, to better understand the data and users' opinions and preferences. But also, to enable a more efficient information retrieval, and to reduce the number of reviews by grouping similar reviews together.\\
 % The mapping from textual data to real-valued vectors is called feature extraction. One of the simplest techniques to numerically represent text is Bag of Words (BOW). In BOW, we make a list of unique words in the text corpus called vocabulary. Then we can represent each sentence or document as a vector, with each word represented as 1 for presence and 0 for absence. Another representation is to count the number of times each word appears in a document. The most popular approach is using the Term Frequency-Inverse Document Frequency (TF-IDF) technique.
 We used two different clustering algorithms to identify different clusters from the total number of reviews in the dataset. Before we began, however, we performed dimensionality reduction of the total dataset - training plus testing - using Singular Value Decomposition (SVD).\\
-SVD can be useful for text clustering as it provides a computationally efficient and effective way to reduce the dimensionality of large and sparse document-term matrices. SVD can transform the high-dimensional document-term matrix into a low-dimensional representation, which can then be used to cluster the documents based on their similarity. The reduced dimensionality representation of documents obtained through SVD it's used as input to the clustering algorithms.
+SVD can be useful for text clustering as it provides a computationally efficient and effective way to reduce the dimensionality of large and sparse document-term matrices. SVD can transform the high-dimensional document-term matrix into a low-dimensional representation, which can then be used to cluster the documents based on their similarity. The reduced dimensionality representation of documents obtained through SVD it's used as input to the clustering algorithms.\\
+Also, for the clustering phase we used the Tf-Idf vectorizer with 10000 as $'max\_features'$, and we considered only Uni-grams and Bi-grams for reasons of computational efficiency. Using only uni-grams and bi-grams, in fact, can provide a good balance between accuracy and computational efficiency in text clustering tasks.\\
+For each model, we visualized the clusters and calculated the Silhouette coefficient. Then, for each cluster identified by the models, we developed wordclouds.
 
 \subsection{DBSCAN}
 DBSCAN, or \textit{Density-Based Spatial Clustering of Applications with Noise}, is an unsupervised machine learning algorithm used for text clustering.  It works by grouping together text documents that are similar to each other based on their density of word occurrences. It can be used for clustering data points based on density, by grouping together areas with many samples. This makes it especially useful for performing clustering under noisy conditions.\\
@@ -296,7 +303,7 @@ The following are the value of the Silhouette coefficient for the selected algor
 \begin{tabular}{c c c }
 	 & DBSCAN & K-means  \\
 	\hline
-	Silhouette Index & 0.239 & 0.017  \\
+	Silhouette Index & 0.391 & 0.017  \\
 \end{tabular}
 \caption{Silhouette Coefficient}
 \end{table}
@@ -304,10 +311,66 @@ The following are the value of the Silhouette coefficient for the selected algor
 As we can observe from the above table, the Silhouette value for the DBSCAN algorithm is higher than for the K-means algorithm.\\
 We can state that the clusters obtained with DBSCAN are more appropriate and the sample is better clustered than with K-means.
 
-%wordcloud dei cluster
+Below, we can observe the wordclouds for each cluster identified by the DBSCAN algorithm:
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.5]{./images/dbscan_wordcloud1.png}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.5]{./images/dbscan_wordcloud2.png}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.5]{./images/dbscan_wordcloud3.png}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.5]{./images/dbscan_wordcloud4.png}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.5]{./images/dbscan_wordcloud5.png}
+\end{center}
+\end{figure}
+
+Below, instead, we can observe the wordclouds for each cluster identified by the K-means algorithm:
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.5]{./images/kmeans_wordcloud1.png}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.5]{./images/kmeans_wordcloud2.png}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.5]{./images/kmeans_wordcloud3.png}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale=0.5]{./images/kmeans_wordcloud4.png}
+\end{center}
+\end{figure}
 
 \section{Summary}
-...
+In conclusion, we can be satisfied with what we obtained from the text classification phase, with all three algorithms achieving a good accuracy value. In addition, the Silhouette coefficient values obtained by the text clustering algorithms are not equally satisfactory. Possible future developments could include different algorithms and different text representation techniques.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
