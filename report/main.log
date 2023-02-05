@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.8.30)  5 FEB 2023 12:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.8.30)  5 FEB 2023 14:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1209,8 +1209,14 @@ images/kmeans_wordcloud4.png>] (main.aux)
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E1633097F91511792D4E43806918B218;1558.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: CE23CC870D33320F905D7296F23C8B98;1669
+(rerunfilecheck)             After:  738A52214ADB4671337950C0C8C7B6D7;1664.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -1238,7 +1244,7 @@ uhvr8a.pfb><C:/Users/FC/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utm
 b8a.pfb><C:/Users/FC/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a
 .pfb><C:/Users/FC/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on main.pdf (6 pages, 2313300 bytes).
+Output written on main.pdf (6 pages, 2313443 bytes).
 PDF statistics:
  234 PDF objects out of 1000 (max. 8388607)
  46 named destinations out of 1000 (max. 500000)

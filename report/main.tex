@@ -161,7 +161,7 @@ Text Classification is the activity of predicting which data items belongs to a 
 To pursue the goals of our project, we chose to use three classification algorithms, and for each of them we used the two types of text representation developed earlier.\\
 The selected algorithms are as follows: Support Vector Machine (SVM), Multilayer Perceptron (MLP), and Linear Regression (LR).
 
-\subsection{SVM}
+\subsection{Support Vector Machine}
 Support vector machines (SVMs) are a set of supervised learning methods used for classification and other tasks \cite{SVM}. An SVM classifies data by finding the best hyperplane that separates all data points of one class from those of the other class. The best hyperplane for an SVM means the one with the largest margin between the two classes \cite{SVM2}. The advantages of support vector machines are its effectiveness in high dimensional spaces, its effectiveness in cases where the number of dimensions is greater than the number of samples, its memory efficiency, and its versatility. On the other side, the disadvantages of support vector machines include the fact that if the number of features is much greater than the number of samples, avoiding over-fitting in choosing Kernel functions and regularization term is crucial, and also SVMs do not directly provide probability estimates.\\
 In our case, we used the LinearSVC package built on scikit-learn.
 
@@ -181,7 +181,7 @@ In our case, we used the LinearSVC package built on scikit-learn.
 
 As we can observe above, accuracy is better with Bag-of-Words, with a value of 0.87.
 
-\subsection{Multilayer Perceptron}
+\subsection{Multi-Layer Perceptron}
 Multilayer perceptron (MLP) is a supplement of feed forward neural network. It consists of three types of layers: the input layer, output layer and hidden layer \cite{MLP}.\\
 The input layer receives the input signal to be processed. The required task such as prediction and classification is performed by the output layer. An arbitrary number of hidden layers that are placed in between the input and output layer are the true computational engine of the MLP.\\
 In our case we exploited the potential of Keras. Keras is an open source library for machine learning and neural networks in Python.
